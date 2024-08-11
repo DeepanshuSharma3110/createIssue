@@ -1,0 +1,15 @@
+<h1>Comments</h1>
+
+  <% if (comments.length > 0) { %>
+    <% comments.forEach(comment => { %>
+      <div class="comment">
+        <h3><%= comment.authorName %></h3>
+        <p><strong>Title:</strong> <%= comment.issueTitle %></p>
+        <p><strong>Description:</strong> <%= comment.issueDescription %></p>
+        <p class="creation-date"><strong>Created on:</strong> <%= new Date(comment.creationDate).toLocaleString() %></p>
+        <p><strong>Project ID:</strong> <%= comment.project_Id ? comment.project_Id.toString() : 'N/A' %></p>
+      </div>
+    <% }) %>
+  <% } else { %>
+    <p>No comments found.</p>
+  <% } %>

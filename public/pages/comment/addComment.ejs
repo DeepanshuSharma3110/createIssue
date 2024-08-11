@@ -1,0 +1,20 @@
+<h1>Comments</h1>
+
+<form action="/api/comment/add" method="POST">
+  <div>
+    <label for="authorName">project Id:</label>
+    <input type="text" id="authorName" name="project_Id" value='<%-id%>' readonly >
+  </div>
+    <div>
+        <label for="authorName">author Name:</label>
+        <input type="text" id="authorName" name="authorName" required>
+      </div>
+    <label for="issueTitle">Issue Title:</label>
+    <input type="text" id="issueTitle" name="issueTitle" required>
+  </div>
+  <div>
+    <label for="issueDescription">Issue Description:</label>
+    <textarea id="issueDescription" name="issueDescription" rows="4" required></textarea>
+  </div>
+  <button type="submit">Add Comment</button>
+</form>
